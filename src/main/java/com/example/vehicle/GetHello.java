@@ -13,13 +13,14 @@ import org.springframework.web.client.RestTemplate;
 
 
 public class GetHello {
-	RestTemplate rest=new RestTemplate();
-	@GetMapping(value="/getHiviaHello")
+	
+	//RestTemplate rest=new RestTemplate();
+	@GetMapping(value="/getHello")
 	public String setHi() {
-		String url="http://localhost:8080/Hi";
+		//////String url="http://localhost:8082/Hi";
 		
-		ResponseEntity<String>res=rest.exchange(url,HttpMethod.GET,null,String.class);
-		String empName=res.getBody();
-		return empName;
+		//ResponseEntity<String>res=rest.exchange(url,HttpMethod.GET,null,String.class);
+		//String empName=res.getBody();
+		return "hello";
 	}
 }
